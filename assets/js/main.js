@@ -32,7 +32,7 @@ if (memo.APIVersion === 'new') {
     // memoUrl = `${memos}/api/v1/memos?filter=${encodeURIComponent(filter)}&view=MEMO_VIEW_FULL`;
     memoUrl = `${memos}/api/v1/memos?parent=users/${memo.creatorId}`;
 } else if (memo.APIVersion === 'legacy') {
-    memoUrl = memos + "/api/v1/memo?creatorId=" + memo.creatorId + "&rowStatus=NORMAL";
+    memoUrl = memos + "/api/v1/memo&rowStatus=NORMAL";
 } else {
     throw new Error('Invalid APIVersion');
 }
